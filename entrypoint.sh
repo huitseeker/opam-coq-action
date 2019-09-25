@@ -15,10 +15,9 @@ fi
 
 git -C /home/opam/opam-repository pull && opam update -uy
 
-if [ "$*" = "" ]; then
-    opam repo add coq-released https://coq.inria.fr/opam/released
-    opam update
-    opam install -y coq-mathcomp-ssreflect coq-fcsl-pcm
-else
-    sh -c "opam $*"
+opam repo add coq-released https://coq.inria.fr/opam/released
+opam update
+opam install -y coq-mathcomp-ssreflect coq-fcsl-pcm
+if [ ! "$*" = "" ]; then
+    sh -c "$*"
 fi
