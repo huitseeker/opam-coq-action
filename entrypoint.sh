@@ -18,6 +18,7 @@ git -C /home/opam/opam-repository pull && opam update -uy
 opam repo add coq-released https://coq.inria.fr/opam/released
 opam update
 opam install -y coq-mathcomp-ssreflect coq-fcsl-pcm
+eval $(opam env)
 if [ ! "$*" = "" ]; then
     sh -c "$*"
 fi
