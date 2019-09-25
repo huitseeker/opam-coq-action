@@ -9,6 +9,8 @@ LABEL "repository"="http://github.com/avsm/actions-ocaml"
 LABEL "homepage"="http://github.com/avsm/actions-ocaml"
 LABEL "maintainer"="Francois Garillot <francois@garillot.net>"
 
+RUN sudo apt-get install -y libtool autoconf automake m4
+
 ENV OPAMYES=1
 ENV OPAMROOT=/home/opam/.opam
 ADD entrypoint.sh /entrypoint.sh
