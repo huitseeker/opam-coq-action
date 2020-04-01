@@ -13,5 +13,6 @@ RUN sudo apt-get install -y libtool autoconf automake m4
 
 ENV OPAMYES=1
 ENV OPAMROOT=/home/opam/.opam
+ENV OCAML_VERSION="4.09"
 ADD entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
