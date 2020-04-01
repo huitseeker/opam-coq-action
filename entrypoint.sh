@@ -13,7 +13,7 @@ if [ "${OCAML_VERSION}" != "" ]; then
   OPAMSWITCH="${OCAML_VERSION}"
 fi
 
-git -C /home/opam/opam-repository pull && opam update -uy
+git -C /home/opam/opam-repository pull && opam switch set $OPAMSWITCH && opam update -uy
 
 opam repo add coq-released https://coq.inria.fr/opam/released
 opam update
